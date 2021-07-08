@@ -2,7 +2,7 @@ version: v1.0
 name: Semaphore Go CI example
 agent:
   machine:
-    type: e1-standard-2
+    type: s1-test-deploy
     os_image: ubuntu1804
 blocks:
   - name: Build project
@@ -11,3 +11,4 @@ blocks:
         - name: go get & build
           commands:
             - 'echo "hello, darkness, my old friend"'
+            - sleep 300
