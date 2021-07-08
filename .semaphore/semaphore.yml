@@ -2,7 +2,7 @@ version: v1.0
 name: Semaphore Go CI example
 agent:
   machine:
-    type: s1-test-deploy
+    type: s1-lucaspin-test
     os_image: ubuntu1804
 blocks:
   - name: Build project
@@ -11,4 +11,4 @@ blocks:
         - name: go get & build
           commands:
             - 'echo "hello, darkness, my old friend"'
-            - 'for ((i=1; i<=1000; i++)); { echo $i; sleep 0.2; }'
+            - 'for ((i=1; i<=100; i++)); { echo $i; sleep 0.2; }'
