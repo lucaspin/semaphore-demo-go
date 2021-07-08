@@ -11,4 +11,4 @@ blocks:
         - name: go get & build
           commands:
             - 'echo "hello, darkness, my old friend"'
-            - 'for ((i=1; i<=1000; i++)); { echo $i; sleep 0.2 }'
+            - 'for ((i=1; i<=1000; i++)); { echo $i; sleep 0.2; }'
