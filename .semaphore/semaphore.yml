@@ -2,7 +2,7 @@ version: v1.0
 name: Semaphore Go CI example
 agent:
   machine:
-    type: s1-lucaspin-test2
+    type: e1-standard-2
     os_image: ubuntu1804
 blocks:
   - name: Build project
