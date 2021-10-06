@@ -11,3 +11,4 @@ blocks:
         - name: go get & build
           commands:
             - echo $SEMAPHORE_CACHE_NEW_CLI
+            - cache
