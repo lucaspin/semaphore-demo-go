@@ -2,7 +2,7 @@ version: v1.0
 name: Semaphore Go CI example
 agent:
   machine:
-    type: s1-this-agent-type-does-not-exist
+    type: e1-standard-2
     os_image: ubuntu2004
 blocks:
   - name: Build project
