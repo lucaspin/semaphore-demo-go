@@ -2,8 +2,8 @@ version: v1.0
 name: Semaphore Go CI example
 agent:
   machine:
-    type: s1-lucaspin-testing
-    os_image: ubuntu2004
+    type: e1-standard-2
+    os_image: this-image-does-not-exist
 blocks:
   - name: Build project
     task:
