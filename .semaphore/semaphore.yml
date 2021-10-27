@@ -10,8 +10,5 @@ blocks:
       jobs:
         - name: go get & build
           commands:
-            - echo $SEMAPHORE_CACHE_USERNAME
-            - echo $SSH_PRIVATE_KEY_PATH
-            - echo $SEMAPHORE_CACHE_PRIVATE_KEY_PATH
-            - echo $SEMAPHORE_CACHE_URL
-            - cat ~/.ssh/semaphore_cache_key
+            - checkout
+            - echo "YAY"
