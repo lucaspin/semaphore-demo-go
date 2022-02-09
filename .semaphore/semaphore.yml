@@ -2,7 +2,7 @@ version: v1.0
 name: Semaphore Go CI example
 agent:
   machine:
-    type: s1-temp-testing
+    type: s1-lucaspin-test
     os_image: ''
 blocks:
   - name: Build project
