@@ -8,18 +8,6 @@ blocks:
   - name: Build project
     task:
       jobs:
-        - name: go get & build
-          commands:
-            - echo "YAY"
-        - name: 'Job #2'
-          commands:
-            - echo "YAY"
-        - name: 'Job #3'
-          commands:
-            - echo "YAY"
-        - name: 'Job #4'
-          commands:
-            - echo "YAY"
-        - name: 'Job #5'
+        - name: 'Job #1'
           commands:
             - echo "YAY"
