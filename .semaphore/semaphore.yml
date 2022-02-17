@@ -8,6 +8,20 @@ blocks:
   - name: Build project
     task:
       jobs:
-        - name: 'Job #1'
+        - name: 'Job #2'
           commands:
-            - echo "YAY"
+            - echo %MY_IMPORTANT_VAR%
+            - echo %MY_OTHER_IMPORTANT_VAR%
+            - echo %THIS_ONE_DOES_NOT_EXIST%
+      env_vars:
+        - name: MY_IMPORTANT_VAR
+          value: SOME_VALUE
+        - name: MY_OTHER_IMPORTANT_VAR
+          value: SOME_VALUE_2
+      prologue:
+        commands:
+          - systeminfo
+      epilogue:
+        always:
+          commands:
+            - echo %SEMAPHORE_JOB_RESULT%
