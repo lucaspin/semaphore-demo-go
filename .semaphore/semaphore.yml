@@ -8,19 +8,17 @@ blocks:
   - name: Build project
     task:
       jobs:
-        - name: 'Job #2'
+        - name: 'Job #1'
           commands:
-            - echo %MY_IMPORTANT_VAR%
-            - echo %MY_OTHER_IMPORTANT_VAR%
-            - echo %THIS_ONE_DOES_NOT_EXIST%
+            - |-
+              echo %MY_IMPORTANT_VAR%
+              echo %MY_OTHER_IMPORTANT_VAR%
+              echo %THIS_ONE_DOES_NOT_EXIST%
       env_vars:
         - name: MY_IMPORTANT_VAR
           value: SOME_VALUE
         - name: MY_OTHER_IMPORTANT_VAR
           value: SOME_VALUE_2
-      prologue:
-        commands:
-          - systeminfo
       epilogue:
         always:
           commands:
