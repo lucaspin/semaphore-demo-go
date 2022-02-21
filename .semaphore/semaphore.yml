@@ -11,7 +11,7 @@ blocks:
         - name: 'Job #1'
           commands:
             - echo "Sleeping for 60s..."
-            - timeout 60 > null
+            - ping -n 10 127.0.0.1
       env_vars:
         - name: MY_IMPORTANT_VAR
           value: SOME_VALUE
