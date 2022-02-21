@@ -10,10 +10,8 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - |-
-              echo %MY_IMPORTANT_VAR%
-              echo %MY_OTHER_IMPORTANT_VAR%
-              echo %THIS_ONE_DOES_NOT_EXIST%
+            - echo "Sleeping for 60s..."
+            - timeout 60 > null
       env_vars:
         - name: MY_IMPORTANT_VAR
           value: SOME_VALUE
