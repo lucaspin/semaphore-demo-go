@@ -10,9 +10,9 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - (Get-Item .).FullName
+            - Get-ChildItem
             - \vagrant\libcheckout.ps1
-            - (Get-Item .).FullName
+            - Get-ChildItem
       env_vars:
         - name: MY_IMPORTANT_VAR
           value: SOME_VALUE
