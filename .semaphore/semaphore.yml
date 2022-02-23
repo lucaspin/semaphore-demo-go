@@ -10,8 +10,9 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo "Sleeping for 60s..."
-            - ping -n 60 127.0.0.1
+            - cd \vagrant
+            - Powershell.exe -File .\libcheckout.ps1
+            - dir
       env_vars:
         - name: MY_IMPORTANT_VAR
           value: SOME_VALUE
