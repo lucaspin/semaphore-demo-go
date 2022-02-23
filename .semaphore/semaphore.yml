@@ -21,4 +21,4 @@ blocks:
       epilogue:
         always:
           commands:
-            - echo %SEMAPHORE_JOB_RESULT%
+            - 'Write-Output $env:SEMAPHORE_JOB_RESULT'
