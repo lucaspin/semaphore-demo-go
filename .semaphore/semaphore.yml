@@ -10,9 +10,9 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - cd \vagrant
-            - Powershell.exe -File .\libcheckout.ps1
-            - dir
+            - (Get-Item .).FullName
+            - \vagrant\libcheckout.ps1
+            - (Get-Item .).FullName
       env_vars:
         - name: MY_IMPORTANT_VAR
           value: SOME_VALUE
