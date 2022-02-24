@@ -11,7 +11,7 @@ blocks:
         - name: 'Job #1'
           commands:
             - Get-ChildItem
-            - \vagrant\libcheckout.ps1
+            - checkout
             - Get-ChildItem
       env_vars:
         - name: MY_IMPORTANT_VAR
