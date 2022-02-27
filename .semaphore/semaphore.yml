@@ -3,7 +3,7 @@ name: Semaphore Go CI example
 agent:
   machine:
     type: s1-lucaspin-test
-    os_image: ubuntu1804
+    os_image: ''
   containers:
     - name: main
       image: 'semaphoreci/ubuntu:20.04'
