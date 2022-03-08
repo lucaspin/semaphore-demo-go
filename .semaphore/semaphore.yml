@@ -10,9 +10,8 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - 'Start-Process ping -ArgumentList ''-n'',''300'',''127.0.0.1'''
-            - sleep 5
-            - Get-Process ping
+            - checkout
+            - dir
       env_vars:
         - name: MY_IMPORTANT_VAR
           value: SOME_VALUE
