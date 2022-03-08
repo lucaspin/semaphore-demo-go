@@ -10,7 +10,13 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo "YAY"
+            - 'Start-Process ping -ArgumentList ''-n'',''300'',''127.0.0.1'''
+        - name: 'Job #2'
+          commands:
+            - sleep 5
+        - name: 'Job #3'
+          commands:
+            - Get-Process ping
       env_vars:
         - name: MY_IMPORTANT_VAR
           value: SOME_VALUE
