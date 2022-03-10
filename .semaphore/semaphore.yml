@@ -10,14 +10,4 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - checkout
-            - dir
-      env_vars:
-        - name: MY_IMPORTANT_VAR
-          value: SOME_VALUE
-        - name: MY_OTHER_IMPORTANT_VAR
-          value: SOME_VALUE_2
-      epilogue:
-        always:
-          commands:
-            - 'Write-Output $env:SEMAPHORE_JOB_RESULT'
+            - Write-Host "Hello"
