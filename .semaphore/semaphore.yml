@@ -10,4 +10,6 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
+            - Write-Host $HOME
+            - checkout
             - Write-Host "Hello"
