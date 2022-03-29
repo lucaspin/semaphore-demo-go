@@ -11,6 +11,5 @@ blocks:
         - name: 'Job #1'
           commands:
             - Write-Host $HOME
-            - checkout
             - cache
             - Write-Host "Done"
