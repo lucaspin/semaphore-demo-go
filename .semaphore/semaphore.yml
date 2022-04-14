@@ -12,7 +12,6 @@ blocks:
           commands:
             - checkout
             - sem-version go 1.16
-            - go get
             - go build -o ./bin/main
             - cache store $(checksum main.go) bin
   - name: Run tests
