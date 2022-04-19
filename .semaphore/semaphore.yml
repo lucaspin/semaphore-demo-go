@@ -14,10 +14,10 @@ blocks:
             - mkdir testing
             - echo "something" > testing/a.txt
             - echo "something else" > testing/b.txt
-            - artifact push project testing/
-            - artifact push workflow testing/
-            - artifact push job testing/
+            - artifact push project testing/ -v
+            - artifact push workflow testing/ -v
+            - artifact push job testing/ -v
             - rm -rf testing
-            - artifact pull project testing/
-            - artifact pull workflow testing/
-            - artifact pull job testing/
+            - artifact pull project testing/ -v
+            - artifact pull workflow testing/ -v
+            - artifact pull job testing/ -v
