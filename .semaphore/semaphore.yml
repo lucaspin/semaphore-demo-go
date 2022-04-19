@@ -11,6 +11,7 @@ blocks:
         - name: 'Job #1'
           commands:
             - checkout
+            - echo SEMAPHORE_ARTIFACT_TOKEN
             - mkdir testing
             - echo "something" > testing/a.txt
             - echo "something else" > testing/b.txt
