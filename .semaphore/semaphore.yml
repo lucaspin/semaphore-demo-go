@@ -13,3 +13,23 @@ blocks:
             - echo "start"
             - sleep 5
             - echo "done"
+        - name: 'Job #2'
+          commands:
+            - echo "start"
+            - sleep 5
+            - echo "done"
+        - name: 'Job #3'
+          commands:
+            - echo "start"
+            - sleep 5
+            - echo "done"
+        - name: 'Job #4'
+          commands:
+            - echo "start"
+            - sleep 5
+            - echo "done"
+        - name: 'Job #5'
+          commands:
+            - echo "start"
+            - sleep 5
+            - echo "done"
