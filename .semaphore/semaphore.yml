@@ -2,8 +2,8 @@ version: v1.0
 name: Initial Pipeline
 agent:
   machine:
-    type: s1-artifacts-testing
-    os_image: ''
+    type: e1-standard-2
+    os_image: ubuntu2004
 blocks:
   - name: 'Block #1'
     task:
@@ -11,14 +11,3 @@ blocks:
         - name: 'Job #1'
           commands:
             - checkout
-            - echo $SEMAPHORE_ARTIFACT_TOKEN
-            - mkdir testing
-            - echo "something" > testing/a.txt
-            - echo "something else" > testing/b.txt
-            - artifact push project testing/ -v
-            - artifact push workflow testing/ -v
-            - artifact push job testing/ -v
-            - rm -rf testing
-            - artifact pull project testing/ -v
-            - artifact pull workflow testing/ -v
-            - artifact pull job testing/ -v
