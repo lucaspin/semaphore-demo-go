@@ -11,3 +11,5 @@ blocks:
         - name: 'Job #1'
           commands:
             - checkout
+            - echo "hello" > /tmp/hello.txt
+            - artifact push job /tmp/hello.txt
