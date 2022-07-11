@@ -11,5 +11,5 @@ blocks:
         - name: 'Job #1'
           commands:
             - echo "start"
-            - sleep 5
+            - sleep 2
             - echo "done"
