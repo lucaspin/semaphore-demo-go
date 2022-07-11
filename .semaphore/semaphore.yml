@@ -4,12 +4,14 @@ agent:
   machine:
     type: s1-local-testing
     os_image: ''
+execution_time_limit:
+  hours: 2
 blocks:
   - name: 'Block #1'
     task:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo "start"
-            - sleep 2
-            - echo "done"
+            - date
+            - echo "Sleeping for 1h and 15m..."
+            - sleep 4500
