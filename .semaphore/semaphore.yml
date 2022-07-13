@@ -12,4 +12,4 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo "hello"
+            - echo hello
