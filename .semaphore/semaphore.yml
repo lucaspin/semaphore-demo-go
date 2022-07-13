@@ -12,6 +12,4 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - date
-            - echo "Sleeping for 1h and 15m..."
-            - sleep 4500
+            - echo "hello"
