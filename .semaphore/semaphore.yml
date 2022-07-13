@@ -12,4 +12,5 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo hello
+            - echo "Just sleeping..."
+            - sleep 4500
