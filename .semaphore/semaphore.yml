@@ -13,3 +13,5 @@ blocks:
         - name: 'Job #1'
           commands:
             - echo "Just hello"
+      secrets:
+        - name: my-first-secret
