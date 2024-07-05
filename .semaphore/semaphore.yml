@@ -27,3 +27,7 @@ blocks:
         - name: 'Job #1'
           commands:
             - ls
+      agent:
+        machine:
+          type: ''
+          os_image: ''
