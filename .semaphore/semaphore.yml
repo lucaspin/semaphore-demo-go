@@ -3,7 +3,7 @@ name: Semaphore Go CI example
 agent:
   machine:
     type: f1-standard-2
-    os_image: ubuntu2004
+    os_image: ubuntu2204
 blocks:
   - name: Build project
     task:
@@ -17,17 +17,9 @@ blocks:
             - echo "something" > /tmp/something.txt
             - cache store something-key /tmp/something.txt
             - artifact push job /tmp/something.txt
-      agent:
-        machine:
-          type: ''
-          os_image: ''
   - name: 'Block #2'
     task:
       jobs:
         - name: 'Job #1'
           commands:
             - ls
-      agent:
-        machine:
-          type: ''
-          os_image: ''
