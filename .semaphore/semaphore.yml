@@ -2,8 +2,8 @@ version: v1.0
 name: Semaphore Go CI example
 agent:
   machine:
-    type: f1-standard-2
-    os_image: ubuntu2004
+    type: s1-lucaspin-testing
+    os_image: ""
 
 blocks:
   - name: Build project
@@ -11,7 +11,8 @@ blocks:
       jobs:
       - name: go get & build
         commands:
-          - checkout
-          - cache list
-          - echo "something" > /tmp/something.txt
-          - artifact push job /tmp/something.txt
+           - echo hello
+#          - checkout
+#          - cache list
+#          - echo "something" > /tmp/something.txt
+#          - artifact push job /tmp/something.txt
