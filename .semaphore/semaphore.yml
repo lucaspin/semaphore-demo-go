@@ -10,4 +10,4 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo hello
+            - 'for i in $(seq 1 1800); do echo "[$i] Hello, hello, hello" && sleep 1; done'
