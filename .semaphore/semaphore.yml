@@ -16,9 +16,6 @@ blocks:
             - cache usage
             - echo "something" > /tmp/something.txt
             - artifact push job /tmp/something.txt
-      secrets:
-        - name: organization
-        - name: semaphore-demo-go
   - name: 'Block #2'
     task:
       jobs:
