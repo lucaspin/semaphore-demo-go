@@ -15,9 +15,7 @@ blocks:
             - cache list
             - cache usage
             - echo "something" > /tmp/something.txt
-            - cache store something-key /tmp/something.txt
             - artifact push job /tmp/something.txt
-            - env
       secrets:
         - name: organization
         - name: semaphore-demo-go
