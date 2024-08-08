@@ -10,7 +10,7 @@ blocks:
       jobs:
         - name: go get & build
           commands:
-            - 'for i in $(seq 1 1000); do echo "${i} $(LC_ALL=C tr -dc ''A-Za-z0-9!"#$%&''\''''()*+,-./:;<=>?@[\]^_`{|}~'' </dev/urandom | head -c 64)" && sleep 0.01; done'
+            - 'for i in $(seq 1 50000); do echo "${i} $(LC_ALL=C tr -dc ''A-Za-z0-9!"#$%&''\''''()*+,-./:;<=>?@[\]^_`{|}~'' </dev/urandom | head -c 64)" && sleep 0.01; done'
       env_vars:
         - name: SEMAPHORE_AGENT_UPLOAD_JOB_LOGS
           value: always
