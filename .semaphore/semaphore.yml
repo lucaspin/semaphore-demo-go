@@ -2,15 +2,16 @@ version: v1.0
 name: Semaphore Go CI example
 agent:
   machine:
-    type: s1-lucaspin-testing
-    os_image: ''
+    type: f1-standard-2
+    os_image: ubuntu2004
 blocks:
   - name: Build project
     task:
       jobs:
         - name: go get & build
           commands:
-            - 'for i in $(seq 1 50000); do echo "${i} $(LC_ALL=C tr -dc ''A-Za-z0-9!"#$%&''\''''()*+,-./:;<=>?@[\]^_`{|}~'' </dev/urandom | head -c 64)" && sleep 0.01; done'
+            - /opt/semaphoreci/agent version
+            - 'for i in $(seq 1 5000); do echo "${i} $(LC_ALL=C tr -dc ''A-Za-z0-9!"#$%&''\''''()*+,-./:;<=>?@[\]^_`{|}~'' </dev/urandom | head -c 64)" && sleep 0.01; done'
       env_vars:
         - name: SEMAPHORE_AGENT_UPLOAD_JOB_LOGS
-          value: always
+          value: when-trimmed
