@@ -10,7 +10,7 @@ blocks:
       jobs:
         - name: go get & build
           commands:
-            - echo "hello world"
+            - echo "hello"
             - 'for i in $(seq 1 100); do echo "${i} $(LC_ALL=C tr -dc ''A-Za-z0-9!"#$%&''\''''()*+,-./:;<=>?@[\]^_`{|}~'' </dev/urandom | head -c 64)" && sleep 0.01; done'
             - echo hello > /tmp/hello.txt
             - artifact push job /tmp/hello.txt
