@@ -2,8 +2,8 @@ version: v1.0
 name: Pipeline 2
 agent:
   machine:
-    type: ''
-    os_image: ''
+    type: f1-standard-2
+    os_image: ubuntu2204
 blocks:
   - name: 'Block #1'
     task:
