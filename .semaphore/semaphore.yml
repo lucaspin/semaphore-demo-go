@@ -11,6 +11,3 @@ blocks:
         - name: go get & build
           commands:
             - echo hello
-      env_vars:
-        - name: SEMAPHORE_AGENT_UPLOAD_JOB_LOGS
-          value: when-trimmed
