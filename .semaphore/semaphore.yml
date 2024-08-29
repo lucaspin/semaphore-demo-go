@@ -11,6 +11,6 @@ blocks:
         - name: go get & build
           commands:
             - echo hello
-promotions:
-  - name: Promotion 1
-    pipeline_file: pipeline_2.yml
+      env_vars:
+        - name: SEMAPHORE_AGENT_UPLOAD_JOB_LOGS
+          value: when-trimmed
