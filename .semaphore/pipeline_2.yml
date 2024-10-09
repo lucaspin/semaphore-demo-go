@@ -1,13 +1,13 @@
 version: v1.0
-name: Pipeline 2
+name: Deploy
 agent:
   machine:
     type: f1-standard-2
     os_image: ubuntu2204
 blocks:
-  - name: 'Block #1'
+  - name: Deploy
     task:
       jobs:
-        - name: 'Job #1'
+        - name: Deploy
           commands:
-            - echo "job 1"
+            - echo "very important deployment"
