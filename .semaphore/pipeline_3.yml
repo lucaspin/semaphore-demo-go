@@ -2,8 +2,8 @@ version: v1.0
 name: Pipeline 3
 agent:
   machine:
-    type: ''
-    os_image: ''
+    type: f1-standard-2
+    os_image: ubuntu2004
 blocks:
   - name: Deploy 3
     task:
