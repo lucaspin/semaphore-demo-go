@@ -12,6 +12,7 @@ blocks:
           commands:
             - echo hello > /tmp/hello.txt
             - artifact push job /tmp/hello.txt
+            - artifact pull job hello.txt
 promotions:
   - name: Promotion 1
     pipeline_file: pipeline_3.yml
