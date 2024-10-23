@@ -2,15 +2,15 @@ version: v1.0
 name: Semaphore Go CI example
 agent:
   machine:
-    type: s1-lucaspin-testing
-    os_image: ''
+    type: f1-standard-2
+    os_image: ubuntu2004
 blocks:
   - name: Build project
     task:
       jobs:
         - name: Test
           commands:
-            - echo hello
+            - echo $SEMAPHORE_OIDC_TOKEN
 promotions:
   - name: Promotion 1
     pipeline_file: pipeline_3.yml
