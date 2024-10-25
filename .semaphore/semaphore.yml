@@ -10,7 +10,7 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - sleep 50
+            - echo hello
 promotions:
   - name: Promotion 1
     pipeline_file: pipeline_3.yml
