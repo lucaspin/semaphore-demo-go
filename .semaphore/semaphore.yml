@@ -11,6 +11,7 @@ blocks:
         - name: Test
           commands:
             - echo hello
+            - echo hello again
 promotions:
   - name: Promotion 1
     pipeline_file: pipeline_3.yml
