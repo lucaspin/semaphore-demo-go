@@ -12,6 +12,7 @@ blocks:
           commands:
             - echo hello
             - echo hello again
+            - sleep 60
 promotions:
   - name: Promotion 1
     pipeline_file: pipeline_3.yml
