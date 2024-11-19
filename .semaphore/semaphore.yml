@@ -4,6 +4,9 @@ agent:
   machine:
     type: s1-lucaspin-testing
     os_image: ''
+  containers:
+    - name: main
+      image: 'alpine:3.18.0'
 blocks:
   - name: Build project
     task:
