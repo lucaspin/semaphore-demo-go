@@ -6,7 +6,7 @@ agent:
     os_image: ''
   containers:
     - name: main
-      image: 'ubuntu:22.04'
+      image: 'semaphoreci/ubuntu:20.04'
 blocks:
   - name: Build project
     task:
