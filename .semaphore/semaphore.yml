@@ -6,7 +6,7 @@ agent:
     os_image: ''
   containers:
     - name: main
-      image: 'alpine:3.18.0'
+      image: 'ubuntu:22.04'
 blocks:
   - name: Build project
     task:
