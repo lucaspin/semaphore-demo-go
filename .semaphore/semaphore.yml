@@ -2,8 +2,8 @@ version: v1.0
 name: Semaphore Go CI example
 agent:
   machine:
-    type: f1-standard-2
-    os_image: ubuntu2004
+    type: s1-lucaspin-testing
+    os_image: ''
 blocks:
   - name: Build project
     task:
@@ -11,10 +11,3 @@ blocks:
         - name: Test
           commands:
             - echo hello
-            - sleep 5
-            - echo hello again
-            - echo something new
-            - echo on new branch
-promotions:
-  - name: Promotion 1
-    pipeline_file: pipeline_3.yml
