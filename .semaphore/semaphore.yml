@@ -14,3 +14,4 @@ blocks:
         - name: Test
           commands:
             - echo hello
+          parallelism: 5
