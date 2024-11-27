@@ -13,5 +13,4 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - echo hello
-          parallelism: 15
+            - 'for i in $(seq 1 5000); do echo "${i} $(LC_ALL=C tr -dc ''A-Za-z0-9!#$%&()*+,-./:;<=>?@^_{|}~'' </dev/urandom | head -c 256)"; done'
