@@ -13,7 +13,7 @@ blocks:
             - echo hello
             - sleep 5
             - echo oh hello again
-          parallelism: 10
+          unknown: something
 promotions:
   - name: Promotion 1
     pipeline_file: pipeline_3.yml
