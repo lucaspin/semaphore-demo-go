@@ -10,7 +10,7 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - echo hello6
+            - echo hello
             - sleep 5
             - echo oh hello again
 promotions:
