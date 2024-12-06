@@ -14,4 +14,3 @@ blocks:
         - name: Test
           commands:
             - 'for i in $(seq 1 1000); do echo "${i} $(LC_ALL=C tr -dc ''A-Za-z0-9!#$%&()*+,-./:;<=>?@^_{|}~'' </dev/urandom | head -c 256)"; done'
-          parallelism: 10
