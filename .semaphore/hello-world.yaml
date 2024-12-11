@@ -1,0 +1,15 @@
+version: v1.0
+name: Initial Pipeline
+agent:
+  machine:
+    type: s1-default-type
+    os_image: ""
+execution_time_limit:
+  hours: 2
+blocks:
+  - name: 'Block #1'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - echo "hello world"
