@@ -10,6 +10,10 @@ blocks:
       jobs:
         - name: Test
           commands:
+            - cd /tmp
+            - 'curl -sL https://github.com/semaphoreci/artifact/releases/download/v0.6.5/artifact_Linux_x86_64.tar.gz -o artifact.tar.gz'
+            - tar xzvf /tmp/artifact.tar.gz
+            - sudo mv artifact /usr/local/bin
             - echo something > /tmp/something.txt
             - artifact push job /tmp/something.txt -v
             - artifact pull job something.txt -v
