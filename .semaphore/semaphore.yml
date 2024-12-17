@@ -2,15 +2,15 @@ version: v1.0
 name: Semaphore Go CI example
 agent:
   machine:
-    type: s1-lucaspin-testing
-    os_image: ''
-  containers:
-    - name: main
-      image: 'semaphoreci/ubuntu:20.04'
+    type: f1-standard-2
+    os_image: ubuntu2004
 blocks:
   - name: Build project
     task:
       jobs:
         - name: Test
           commands:
-            - 'for i in $(seq 1 1000); do echo "${i} $(LC_ALL=C tr -dc ''A-Za-z0-9!#$%&()*+,-./:;<=>?@^_{|}~'' </dev/urandom | head -c 256)"; done'
+            - echo something > /tmp/something.txt
+            - artifact push job /tmp/something.txt -v
+            - artifact pull job something.txt -v
+            - cat something.txt
