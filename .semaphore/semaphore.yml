@@ -16,5 +16,6 @@ blocks:
             - sudo mv artifact /usr/local/bin
             - echo something > /tmp/something.txt
             - artifact push job /tmp/something.txt -v
+            - rm something.txt
             - artifact pull job something.txt -v
             - cat something.txt
