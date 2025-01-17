@@ -10,8 +10,7 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - echo hello > /tmp/something.txt
-            - artifact push job /tmp/something.txt
+            - echo $SEMAPHORE_OIDC_TOKEN
 promotions:
   - name: Promotion 1
     pipeline_file: pipeline_3.yml
