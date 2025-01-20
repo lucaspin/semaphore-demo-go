@@ -11,6 +11,7 @@ blocks:
         - name: Test
           commands:
             - echo $SEMAPHORE_OIDC_TOKEN
+            - echo hello
 promotions:
   - name: Promotion 1
     pipeline_file: pipeline_3.yml
