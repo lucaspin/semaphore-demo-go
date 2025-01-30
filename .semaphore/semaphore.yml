@@ -10,4 +10,4 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - echo hello
+            - echo $SEMAPHORE_CACHE_ARCHIVE_METHOD
