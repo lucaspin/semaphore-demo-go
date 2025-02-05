@@ -10,4 +10,11 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - echo $SEMAPHORE_CACHE_ARCHIVE_METHOD
+            - echo something > /tmp/something.txt
+            - artifact push job /tmp/something.txt
+            - rm /tmp/something.txt
+            - artifact pull job something.txt
+            - artifact pull job something-else.txt || true
+            - cat something.txt
+            - artifact yank job something.txt
+            - artifact yank job something-else.txt || true
