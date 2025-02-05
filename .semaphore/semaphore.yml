@@ -2,19 +2,12 @@ version: v1.0
 name: Semaphore Go CI example
 agent:
   machine:
-    type: f1-standard-2
-    os_image: ubuntu2204
+    type: s1-lucaspin-testing
+    os_image: ''
 blocks:
   - name: Build project
     task:
       jobs:
         - name: Test
           commands:
-            - echo something > /tmp/something.txt
-            - artifact push job /tmp/something.txt
-            - rm /tmp/something.txt
-            - artifact pull job something.txt
-            - artifact pull job something-else.txt || true
-            - cat something.txt
-            - artifact yank job something.txt
-            - artifact yank job something-else.txt || true
+            - echo something hello yay
