@@ -13,4 +13,4 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - echo something hello yay
+            - checkout
