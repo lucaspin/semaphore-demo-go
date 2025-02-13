@@ -11,6 +11,4 @@ blocks:
         - name: Test
           commands:
             - checkout
-            - echo "2"
-      secrets:
-        - name: fooo
+            - echo 3
