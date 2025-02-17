@@ -3,7 +3,7 @@ name: Initial Pipeline
 agent:
   machine:
     type: s1-default-type
-    os_image: ""
+    os_image: ''
   containers:
     - name: main
       image: 'semaphoreci/ubuntu:20.04'
