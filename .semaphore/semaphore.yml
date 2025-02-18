@@ -2,8 +2,8 @@ version: v1.0
 name: Initial Pipeline
 agent:
   machine:
-    type: s1-lucaspin-testing
-    os_image: ''
+    type: f1-standard-2
+    os_image: ubuntu2204
 execution_time_limit:
   hours: 2
 blocks:
