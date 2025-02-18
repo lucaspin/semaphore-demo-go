@@ -12,4 +12,7 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo "Just hello"
+            - echo "Just hello" > just+hello.txt
+            - artifact push job just+hello.txt
+            - artifact pull job just+hello.txt || true
+            - artifact yank job just+hello.txt || true
