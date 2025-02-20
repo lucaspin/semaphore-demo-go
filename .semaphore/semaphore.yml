@@ -13,6 +13,8 @@ blocks:
         - name: 'Job #1'
           commands:
             - echo $SENSITIVE_TOKEN
+            - echo $SEMAPHORE_ARTIFACT_TOKEN
+            - echo $SEMAPHORE_OIDC_TOKEN
             - echo $NOT_SENSITIVE_AT_ALL
       env_vars:
         - name: SENSITIVE_TOKEN
