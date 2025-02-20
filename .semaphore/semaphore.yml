@@ -2,8 +2,8 @@ version: v1.0
 name: Initial Pipeline
 agent:
   machine:
-    type: f1-standard-2
-    os_image: ubuntu2204
+    type: s1-lucaspin-testing
+    os_image: ''
 execution_time_limit:
   hours: 2
 blocks:
@@ -12,7 +12,10 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo "Just hello" > just+hello.txt
-            - artifact push job just+hello.txt
-            - artifact pull job just+hello.txt || true
-            - artifact yank job just+hello.txt || true
+            - echo $SENSITIVE_TOKEN
+            - echo $NOT_SENSITIVE_AT_ALL
+      env_vars:
+        - name: SENSITIVE_TOKEN
+          value: this-is-a-sensitive-value
+        - name: NOT_SENSITIVE_AT_ALL
+          value: not-sensitive-at-all
