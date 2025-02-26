@@ -2,8 +2,8 @@ version: v1.0
 name: Initial Pipeline
 agent:
   machine:
-    type: f1-standard-2
-    os_image: ubuntu2204
+    type: s1-lucaspin-testing
+    os_image: ''
 execution_time_limit:
   hours: 2
 blocks:
@@ -12,4 +12,5 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo $SEMAPHORE_OIDC_TOKEN
+            - echo hello > /tmp/hello.txt
+            - artifact push job /tmp/hello.txt
