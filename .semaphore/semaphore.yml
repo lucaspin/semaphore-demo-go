@@ -2,8 +2,8 @@ version: v1.0
 name: Initial Pipeline
 agent:
   machine:
-    type: s1-lucaspin-testing
-    os_image: ''
+    type: e1-standard-2
+    os_image: ubuntu2004
 execution_time_limit:
   hours: 2
 blocks:
@@ -12,7 +12,4 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo $SENSITIVE_TOKEN; echo $SEMAPHORE_ARTIFACT_TOKEN; echo $SEMAPHORE_JOB_ID; echo $CI; echo $SEMAPHORE_OIDC_TOKEN; echo $NOT_SENSITIVE_AT_ALL
-      env_vars:
-        - name: SENSITIVE_TOKEN
-          value: this-is-a-sensitive-value
+            - echo $SEMAPHORE_OIDC_TOKEN
