@@ -12,5 +12,3 @@ blocks:
           commands:
             - checkout
             - echo "321"
-      secrets:
-        - name: fooo
