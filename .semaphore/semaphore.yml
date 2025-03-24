@@ -12,3 +12,4 @@ blocks:
           commands:
             - checkout
             - echo "321"
+            - echo "123"
