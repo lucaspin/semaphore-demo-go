@@ -3,15 +3,15 @@ name: Semaphore Go CI example
 agent:
   machine:
     type: f1-standard-2
-    os_image: ubuntu2004
+    os_image: ubuntu2204
 blocks:
   - name: Build project
     task:
       jobs:
         - name: Test
           commands:
-            - echo $SEMAPHORE_OIDC_TOKEN
-            - echo hello
-promotions:
-  - name: Promotion 1
-    pipeline_file: pipeline_3.yml
+            - checkout
+            - echo "321"
+            - echo "123"
+            - echo "changed something"
+            - echo "something else"
