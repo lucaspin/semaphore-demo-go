@@ -1,0 +1,13 @@
+version: v1.0
+name: Deploy
+agent:
+  machine:
+    type: f1-standard-2
+    os_image: ubuntu2204
+blocks:
+  - name: Deploy
+    task:
+      jobs:
+        - name: Deploy
+          commands:
+            - echo "very important deployment"
