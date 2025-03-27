@@ -10,7 +10,7 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - mkdir .workflow-editor/.semaphore
+            - mkdir -p .workflow-editor/.semaphore
             - echo "main pipeline" > .workflow-editor/.semaphore/semaphore.yml
             - echo "release" > .workflow-editor/.semaphore/release.yml
             - artifact push job .workflow-editor/.semaphore/semaphore.yml -d .workflow-editor/.semaphore
