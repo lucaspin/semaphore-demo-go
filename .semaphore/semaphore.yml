@@ -14,5 +14,10 @@ blocks:
             - echo "main pipeline" > .workflow-editor/.semaphore/semaphore.yml
             - echo "integration" > .workflow-editor/.semaphore/integration.yml
             - mkdir -p .workflow-editor/.semaphore/release
-            - echo "release" > .workflow-editor/.semaphore/release/release.yml
+            - echo "prod" > .workflow-editor/.semaphore/release/prod.yml
+            - echo "preprod" > .workflow-editor/.semaphore/release/preprod.yml
+            - mkdir -p .workflow-editor/.semaphore/release/other
+            - echo "a" > .workflow-editor/.semaphore/release/other/a.yml
+            - echo "b" > .workflow-editor/.semaphore/release/other/b.yml
+            - echo "c" > .workflow-editor/.semaphore/release/other/c.yml
             - artifact push job .workflow-editor/.semaphore -d .workflow-editor/.semaphore
