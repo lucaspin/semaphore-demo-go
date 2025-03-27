@@ -12,5 +12,7 @@ blocks:
           commands:
             - mkdir -p .workflow-editor/.semaphore
             - echo "main pipeline" > .workflow-editor/.semaphore/semaphore.yml
-            - echo "release" > .workflow-editor/.semaphore/release.yml
+            - echo "integration" > .workflow-editor/.semaphore/integration.yml
+            - mkdir -p .workflow-editor/.semaphore/release
+            - echo "release" > .workflow-editor/.semaphore/release/release.yml
             - artifact push job .workflow-editor/.semaphore -d .workflow-editor/.semaphore
