@@ -14,3 +14,4 @@ blocks:
             - echo "321"
             - echo "123"
             - echo "changed something"
+            - echo something > /tmp/something.txt
