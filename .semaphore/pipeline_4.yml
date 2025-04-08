@@ -11,3 +11,7 @@ blocks:
         - name: 'Job #1'
           commands:
             - echo "job 1"
+      agent:
+        machine:
+          type: s1-lucaspin-testing
+          os_image: ''
