@@ -1,5 +1,5 @@
 version: v1.0
-name: 'Pipeline 3 - ${{parameters.REF_TYPE}} - ${{parameters.REF}} - ${{parameters.REPOSITORY}}'
+name: 'Pipeline 3 - ${{parameters.REF}}'
 agent:
   machine:
     type: f1-standard-2
@@ -10,6 +10,11 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo $REF_TYPE
             - echo $REF
-            - echo $REPOSITORY
+            - 'export JUST_TAG="${REF/refs\/tags\//}"'
+            - |
+              curl -X POST \
+                -H "Content-Type: application/json" \
+                -H "Authorization: Bearer $SEMAPHORE_STAGE_EXECUTION_TOKEN" \
+                --data "{\"version\":\"$JUST_TAG\"}" \
+                https://lucaspin.sxmoon.com/api/v1/delivery/executions/$SEMAPHORE_STAGE_EXECUTION_ID/outputs
