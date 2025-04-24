@@ -1,5 +1,5 @@
 version: v1.0
-name: 'Pipeline 3 - ${{parameters.REF}}'
+name: 'PreProduction deployment - ${{parameters.REF}}'
 agent:
   machine:
     type: f1-standard-2

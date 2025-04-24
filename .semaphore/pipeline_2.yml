@@ -1,5 +1,5 @@
 version: v1.0
-name: Deploy
+name: 'Production Deployment - ${{parameters.VERSION}}'
 agent:
   machine:
     type: f1-standard-2
@@ -10,4 +10,10 @@ blocks:
       jobs:
         - name: Deploy
           commands:
-            - echo "very important deployment"
+            - echo "Deploying $VERSION..."
+            - |
+              curl -X POST \
+                -H "Content-Type: application/json" \
+                -H "Authorization: Bearer $SEMAPHORE_STAGE_EXECUTION_TOKEN" \
+                --data "{\"version\":\"$VERSION\"}" \
+                https://lucaspin.sxmoon.com/api/v1/delivery/executions/$SEMAPHORE_STAGE_EXECUTION_ID/outputs
