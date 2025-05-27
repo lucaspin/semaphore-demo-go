@@ -13,6 +13,6 @@ blocks:
             - checkout
             - echo "321"
             - echo "123"
-            - sleep 15
+            - sleep 5
             - echo "changed something"
             - echo "something else"
