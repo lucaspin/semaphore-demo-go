@@ -1,5 +1,5 @@
 version: v1.0
-name: 'Deploy - ${{parameters.ENVIRONMENT}} - ${{parameters.VERSION}}'
+name: 'Deploy - ${{parameters.ENVIRONMENT}} - ${{parameters.TAG}}'
 agent:
   machine:
     type: f1-standard-2
@@ -10,6 +10,6 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo "Starting deployment of $VERSION to $ENVIRONMENT..."
-            - sleep 30
+            - echo "Starting deployment of $TAG to $ENVIRONMENT..."
+            - sleep 5
             - echo "Done."
