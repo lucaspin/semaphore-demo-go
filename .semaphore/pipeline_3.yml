@@ -1,15 +1,17 @@
 version: v1.0
-name: 'Deploy - ${{parameters.ENVIRONMENT}} - ${{parameters.TAG}}'
+name: 'Deploy - A=${{parameters.VERSION_A}}, B=${{parameters.VERSION_B}}'
 agent:
   machine:
     type: f1-standard-2
     os_image: ubuntu2004
+'-H "Authorization': 'Bearer $SEMAPHORE_STAGE_EXECUTION_TOKEN" \ --data ''{"VERSION":"v2"}'' \ "$SUPERPLANE_URL/api/v1/delivery/executions/$SEMAPHORE_STAGE_EXECUTION_ID/outputs" - echo "Done."'
 blocks:
-  - name: 'Deploy to ${{parameters.ENVIRONMENT}}'
+  - name: Build
     task:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo "Starting deployment of $TAG to $ENVIRONMENT..."
+            - 'echo ''A=${VERSION_A}, B=${VERSION_B)"'
             - sleep 5
-            - echo "Done."
+            - |
+              curl -X POST -H "Content-Type: application/json" \
