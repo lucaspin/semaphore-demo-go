@@ -4,7 +4,6 @@ agent:
   machine:
     type: f1-standard-2
     os_image: ubuntu2004
-'-H "Authorization': 'Bearer $SEMAPHORE_STAGE_EXECUTION_TOKEN" \ --data ''{"VERSION":"v2"}'' \ "$SUPERPLANE_URL/api/v1/delivery/executions/$SEMAPHORE_STAGE_EXECUTION_ID/outputs" - echo "Done."'
 blocks:
   - name: Build
     task:
@@ -15,3 +14,7 @@ blocks:
             - sleep 5
             - |
               curl -X POST -H "Content-Type: application/json" \
+                -H "Authorization: Bearer $SEMAPHORE_STAGE_EXECUTION_TOKEN" \
+                --data '{"VERSION":"v2"}' \
+                "$SUPERPLANE_URL/api/v1/delivery/executions/$SEMAPHORE_STAGE_EXECUTION_ID/outputs"
+            - echo Done
