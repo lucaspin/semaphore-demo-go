@@ -10,11 +10,6 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo "A=${VERSION_A}, B=${VERSION_B)"
-            - sleep 5
-            - |
-              curl -X POST -H "Content-Type: application/json" \
-                -H "Authorization: Bearer $SEMAPHORE_STAGE_EXECUTION_TOKEN" \
-                --data '{"VERSION":"v2"}' \
-                "$SUPERPLANE_URL/api/v1/delivery/executions/$SEMAPHORE_STAGE_EXECUTION_ID/outputs"
+            - echo "A=$VERSION_A, B=$VERSION_B"
+            - echo $SEMAPHORE_STAGE_EXECUTION_TOKEN
             - echo Done
