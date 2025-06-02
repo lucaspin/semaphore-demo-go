@@ -11,5 +11,16 @@ blocks:
         - name: 'Job #1'
           commands:
             - echo "A=$VERSION_A, B=$VERSION_B"
-            - echo $SEMAPHORE_STAGE_EXECUTION_TOKEN
+            - |
+              curl -X POST \
+                -H "Content-Type: application/json" \
+                -H "Authorization: Bearer $SEMAPHORE_STAGE_EXECUTION_TOKEN" \
+                --data $'
+                  {
+                    "executionId": $SEMAPHORE_STAGE_EXECUTION_ID,
+                    "outputs": {
+                      "VERSION":"v2"
+                    }
+                  }'
+                https://smee.io/zwaE5vhCDRouTC1c
             - echo Done
