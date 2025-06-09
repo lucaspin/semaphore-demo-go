@@ -10,4 +10,5 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - echo $SEMAPHORE_OIDC_TOKEN
+            - 'echo "OIDC token: $SEMAPHORE_OIDC_TOKEN"'
+            - 'echo "Artifact token: $SEMAPHORE_ARTIFACT_TOKEN"'
