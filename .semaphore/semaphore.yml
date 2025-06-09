@@ -13,3 +13,6 @@ blocks:
             - 'echo "OIDC token: $SEMAPHORE_OIDC_TOKEN"'
             - 'echo "Artifact token: $SEMAPHORE_ARTIFACT_TOKEN"'
             - 'echo "Other: $VAR_FOO"'
+      env_vars:
+        - name: VAR_FOO
+          value: FOO_1
