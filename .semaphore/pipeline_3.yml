@@ -10,7 +10,7 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - echo "A=$VERSION_A, B=$VERSION_B"
+            - 'echo "A=$VERSION_A, B=$VERSION_B"'
             - |
               curl -X POST \
                 -H "Content-Type: application/json" \
