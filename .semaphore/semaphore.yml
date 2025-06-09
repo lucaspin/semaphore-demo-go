@@ -10,9 +10,4 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - checkout
-            - echo "321"
-            - echo "123"
-            - echo "changed something"
-            - echo something > /tmp/something.txt
-            - artifact push job /tmp/something.txt
+            - echo $SEMAPHORE_OIDC_TOKEN
