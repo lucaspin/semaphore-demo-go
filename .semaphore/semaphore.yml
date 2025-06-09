@@ -10,8 +10,8 @@ blocks:
       jobs:
         - name: Test
           commands:
-            - 'echo "OIDC token: $SEMAPHORE_OIDC_TOKEN"'
-            - 'echo "Artifact token: $SEMAPHORE_ARTIFACT_TOKEN"'
+            - 'echo "OIDC token: $SEMAPHORE_OIDC_TOKEN - abcdef"'
+            - 'echo "Artifact token: $SEMAPHORE_ARTIFACT_TOKEN - abcdef"'
             - 'echo "Other: $VAR_FOO"'
       env_vars:
         - name: VAR_FOO
