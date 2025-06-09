@@ -4,6 +4,8 @@ agent:
   machine:
     type: f1-standard-2
     os_image: ubuntu2204
+execution_time_limit:
+  hours: 24
 blocks:
   - name: Build project
     task:
