@@ -4,7 +4,6 @@ agent:
   machine:
     type: f1-standard-2
     os_image: ubuntu2204
-hours: 3
 commands:
   - checkout
   - echo "321"
@@ -17,4 +16,6 @@ blocks:
     task:
       jobs:
         - name: Test
+          execution_time_limit: null
+          hours: 3
           commands: []
