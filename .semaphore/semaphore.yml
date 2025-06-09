@@ -12,7 +12,7 @@ blocks:
       jobs:
         - name: Test
           execution_time_limit:
-            hours: 3
+            minutes: 30
           commands:
             - checkout
             - echo "321"
