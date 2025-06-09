@@ -4,18 +4,17 @@ agent:
   machine:
     type: f1-standard-2
     os_image: ubuntu2204
-commands:
-  - checkout
-  - echo "321"
-  - echo "123"
-  - sleep 5
-  - echo "changed something"
-  - echo "something else"
 blocks:
   - name: Build project
     task:
       jobs:
         - name: Test
-          execution_time_limit: null
-          hours: 3
-          commands: []
+          execution_time_limit:
+            hours: 3
+          commands:
+            - checkout
+            - echo "321"
+            - echo "123"
+            - sleep 5
+            - echo "changed something"
+            - echo "something else"
