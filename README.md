@@ -1,7 +1,13 @@
 # Semaphore demo CI pipeline using Go
 
+Just testing something.
+Changing something again
 Update here too.
 Something different, very completely different, change.
+more changes
+more
+more
+more
 more changes here
 more
 
