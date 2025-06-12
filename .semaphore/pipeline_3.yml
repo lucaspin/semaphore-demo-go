@@ -1,5 +1,5 @@
 version: v1.0
-name: 'Deploy - A=${{parameters.VERSION}}'
+name: 'Deploy'
 agent:
   machine:
     type: f1-standard-2
