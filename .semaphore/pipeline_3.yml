@@ -10,11 +10,12 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - 'echo "A=$VERSION_A, B=$VERSION_B"'
+            - IMAGE=$(uuidgen)
+            - echo $IMAGE
             - |
               curl -X POST \
                 -H "Content-Type: application/json" \
                 -H "Authorization: Bearer $SEMAPHORE_STAGE_EXECUTION_TOKEN" \
-                --data "{\"execution_id\":\"$SEMAPHORE_STAGE_EXECUTION_ID\",\"outputs\":{\"VERSION\":\"v2\"}}" \
-                https://smee.io/zwaE5vhCDRouTC1c
+                --data "{\"execution_id\":\"$SEMAPHORE_STAGE_EXECUTION_ID\",\"outputs\":{\"IMAGE\":\"$IMAGE\"}}" \
+                https://superplane.sxmoon.com/api/v1/outputs
             - echo Done
