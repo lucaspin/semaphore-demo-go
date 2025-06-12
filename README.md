@@ -1,5 +1,6 @@
 # Semaphore demo CI pipeline using Go
 
+Update here too.
 Something different, very completely different, change.
 
 This is an example program and CI pipeline showing how to run a Go project on
