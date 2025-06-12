@@ -1,5 +1,5 @@
 version: v1.0
-name: 'Deploy - A=${{parameters.VERSION_A}}, B=${{parameters.VERSION_B}}'
+name: 'Deploy - A=${{parameters.VERSION}}'
 agent:
   machine:
     type: f1-standard-2
