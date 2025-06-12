@@ -3,6 +3,7 @@
 Update here too.
 Something different, very completely different, change.
 more changes here
+more
 
 This is an example program and CI pipeline showing how to run a Go project on
 Semaphore 2.0.
