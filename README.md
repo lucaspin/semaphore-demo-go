@@ -1,5 +1,7 @@
 # Semaphore demo CI pipeline using Go
 
+Just testing something.
+Changing something again
 Something different, very completely different, change.
 
 This is an example program and CI pipeline showing how to run a Go project on
