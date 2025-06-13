@@ -1,7 +1,5 @@
 # Semaphore demo CI pipeline using Go
 
-Update here too.
-Something different, very completely different, change.
 more changes here
 more
 more and more changes here
