@@ -1,17 +1,11 @@
 # Semaphore demo CI pipeline using Go
 
+more changes here
+more
+more and more changes here
+hello
+Update here too.
 Completely different updated
-1
-2
-4
-8
-16
-32
-64
-128
-256
-512
-1024
 
 This is an example program and CI pipeline showing how to run a Go project on
 Semaphore 2.0.
