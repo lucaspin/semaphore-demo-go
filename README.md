@@ -3,6 +3,7 @@
 more changes here
 more
 more and more changes here
+hello
 Update here too.
 
 This is an example program and CI pipeline showing how to run a Go project on
