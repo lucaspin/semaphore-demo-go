@@ -2,17 +2,12 @@ version: v1.0
 name: Semaphore Go CI example
 agent:
   machine:
-    type: s1-lucaspin-testing
-    os_image: ''
+    type: f1-standard-2
+    os_image: ubuntu2204
 blocks:
   - name: Build project
     task:
       jobs:
         - name: Test
           commands:
-            - 'echo "OIDC token: $SEMAPHORE_OIDC_TOKEN - abcdef"'
-            - 'echo "Artifact token: $SEMAPHORE_ARTIFACT_TOKEN - abcdef"'
-            - 'echo "Other: $VAR_FOO"'
-      env_vars:
-        - name: VAR_FOO
-          value: FOO_1
+            - echo just testing
