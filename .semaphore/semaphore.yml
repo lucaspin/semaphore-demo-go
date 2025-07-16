@@ -11,3 +11,5 @@ blocks:
         - name: Test
           commands:
             - echo just testing
+    run:
+      when: branch = 'master'
