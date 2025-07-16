@@ -8,8 +8,8 @@ blocks:
   - name: Build project
     task:
       jobs:
-        - name: Test
+        - name: Test23
           commands:
-            - echo just testing
+            - echo just testing2
     run:
       when: branch = 'master' OR branch = 'sxmoon2'
