@@ -12,4 +12,4 @@ blocks:
           commands:
             - echo just testing
     run:
-      when: branch = 'master'
+      when: branch = 'master' OR branch = 'sxmoon2'
